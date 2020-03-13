@@ -1,5 +1,5 @@
 
-// This file is a copy of kc-c1.c in Heng Li's kmer-cnt library with minor updates.
+// This file is a copy of kc-c1.c in Heng Li's kmer-cnt library with minor modifications.
 
 #include <stdio.h>
 #include <stdint.h>

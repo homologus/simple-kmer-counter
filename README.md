@@ -1,7 +1,10 @@
 ## Simple Kmer Counter
 
-These files are copied from https://github.com/lh3/kmer-cnt. I removed everything except kc-c1.c and its related files. Then I modified the kc-c1.c to simplify the code further. The main purpose of this exercise is to understand how to use Heng Li's khashl.h and kseq.h. I removed ketopt.h and kthreads.{h,c} for simplicity.
+Kmer counters are at the heart of many efficient NGS applications. Often we need a bare bones (but efficient) kmer counter to start developing our code. Here is such a simple and efficient kmer counter that can be used as the "starter app" for bioinformatics.
 
+The files in this folder are directly copied from [kmer-cnt](https://github.com/lh3/kmer-cnt). I removed everything else except kc-c1.c and its related files. Then I modified the kc-c1.c to simplify the code further. 
+
+The main purpose of this exercise is to understand Heng Li's khashl.h and kseq.h. Those and other [klib components](https://attractivechaos.github.io/klib/) are optimized for speed. I removed two other klib files (ketopt.h and kthreads.{h,c}) of the original kc-c1.c for simplicity.
 
 ~~~~~~~~~~~
 $ make
@@ -17,9 +20,13 @@ $ ./kmer-counter test.fa
 9       0
 ~~~~~~~~~~~
 
+Please note that the code in this library does not give you the original kmers. If your need the kmers, use reversible hash from [bfc](https://github.com/lh3/bfc) as [here](https://github.com/lh3/bfc/blob/master/kmer.h#L42-L77).
+
+If you start with the code from this file and want better performance, please follow the progression in the original README file quoted below. You may find it easier to start with the simple code, implement your own idea and then add multi-threading/Bloom filter than to start from the more engineered code.
+
 
 ###########################################
-## README File from kmer-cnt
+## README File from kmer-cnt (Heng Li)
 ###########################################
 
 ## Getting Started
