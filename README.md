@@ -24,6 +24,9 @@ Please note that the code in this library does not give you the original kmers. 
 
 If you start with the code from this file and want better performance, please follow the progression in the original README file quoted below. You may find it easier to start with the simple code, implement your own idea and then add multi-threading/Bloom filter than to start from the more engineered code.
 
+The "examples" folder contains example code for individual modules - kseq.h and khashl.h. The one for kseq.h is borrowed from Heng Li's klib library.
+
+
 
 ###########################################
 ## README File from kmer-cnt (Heng Li)
